@@ -12,17 +12,17 @@
     "Jevgenij Tsoi <jevgenij@virtusize.com>"
   ],
   "dependencies": {
-    "js-yaml": "~3.6.1",
-    "lodash": "~4.15.0",
-    "semver": "~5.3.0",
-    "yargs": "~5.0.0"
+    "js-yaml": "~4.1.0",
+    "lodash": "~4.17.21",
+    "semver": "~5.7.2",
+    "yargs": "~17.7.2"
   },
   "devDependencies": {
-    "coveralls": "~2.11.12",
-    "eslint": "~2.13.1",
-    "mocha": "~3.0.2",
+    "coveralls": "~3.1.1",
+    "eslint": "~9.19.0",
+    "mocha": "~11.1.0",
     "must": "~0.13.2",
-    "nyc": "~8.1.0"
+    "nyc": "~17.1.0"
   },
   "homepage": "https://github.com/ceejbot/fivebeans#readme",
   "keywords": [
@@ -42,5 +42,10 @@
     "lint": "eslint bin lib test index.js",
     "test": "nyc mocha -t 8000 -R spec test/",
     "travis": "npm run lint && npm test"
+  },
+  "overrides": {
+    "tough-cookie": {
+      ".": "4.1.3"
+    }
   }
 }
